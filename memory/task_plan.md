@@ -1,25 +1,41 @@
-# Task Plan
+# Task Plan — Native Screens Website
 
-## Status: PHASE B — BLUEPRINT (Awaiting Discovery)
+## Status: PHASE B COMPLETE → Awaiting competitor research before Phase A
 
 ## Phases
-- [ ] B — Blueprint: Discovery questions answered, schema defined
-- [ ] L — Link: Credentials verified, probe scripts green
-- [ ] A — Architect: SOPs written, A.N.T. layers defined
-- [ ] S — Stylize: Output formatted, user sign-off received
-- [ ] T — Trigger: Deployed, automation wired, self-healing active
+- [x] B — Blueprint: All 5 discovery questions answered, schema defined
+- [ ] L — Link: Domain registered, Netlify account set up, Google Business data pulled
+- [ ] A — Architect: SOP written, site structure defined, content outlined
+- [ ] S — Stylize: Full site built, styled, tested on mobile
+- [ ] T — Trigger: Deployed to Netlify on custom domain
 
 ## North Star
-_Not yet defined — awaiting user answer_
-
-## Goals
-_Pending Blueprint discovery_
+Phone calls from South Florida homeowners. Every design decision serves this goal.
 
 ## Checklist
-- [ ] Q1: North Star answered
-- [ ] Q2: Integrations answered
-- [ ] Q3: Source of Truth answered
-- [ ] Q4: Delivery Payload answered
-- [ ] Q5: Behavioral Rules answered
-- [ ] Data Schema defined in CLAUDE.md
-- [ ] Blueprint approved
+- [x] Q1: North Star — phone calls / free estimates
+- [x] Q2: Integrations — click-to-call, Google Reviews, Maps, gallery, social links
+- [x] Q3: Source of Truth — Google Business listing + Facebook/Instagram photos
+- [x] Q4: Delivery Payload — Netlify static site, custom domain TBD
+- [x] Q5: Behavioral Rules — both tones, 50+ years, no pricing, no chatbots
+- [x] Data Schema defined in CLAUDE.md
+- [ ] Competitor research complete (agent running)
+- [ ] Domain availability checked
+- [ ] Site structure / wireframe approved by user
+- [ ] HTML/CSS built
+- [ ] Mobile tested
+- [ ] Deployed
+
+## Services to Feature
+1. Rescreens
+2. Screen Enclosures
+3. Pool Enclosures
+4. Aluminum Roofs
+5. Super Gutters
+
+## Key Content Points
+- 50+ years in business
+- South Florida / Broward County local
+- Licensed & insured
+- Free estimates
+- Family business
