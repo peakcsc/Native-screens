@@ -235,11 +235,11 @@ ul { list-style: none; }
   text-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
-.hero-brand {
-  color: #4ecb71;
-  font-size: clamp(3rem, 9vw, 5.5rem) !important;
-  text-shadow: 0 2px 16px rgba(0,0,0,0.4) !important;
-  letter-spacing: -0.02em;
+.hero-logo {
+  width: min(380px, 75vw);
+  margin: 0 auto 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.45), 0 0 0 4px rgba(255,255,255,0.15);
 }
 
 .hero-sub {
