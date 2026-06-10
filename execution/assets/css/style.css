@@ -235,6 +235,13 @@ ul { list-style: none; }
   text-shadow: 0 2px 8px rgba(0,0,0,0.3);
 }
 
+.hero-brand {
+  color: #4ecb71;
+  font-size: clamp(3rem, 9vw, 5.5rem) !important;
+  text-shadow: 0 2px 16px rgba(0,0,0,0.4) !important;
+  letter-spacing: -0.02em;
+}
+
 .hero-sub {
   font-size: clamp(1rem, 2.5vw, 1.3rem);
   margin-bottom: 2rem;
