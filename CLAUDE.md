@@ -48,7 +48,9 @@
 - **Behavioral Rules:**
   - Tone: Family/legacy AND professional/expert — both
   - Must-dos: 50+ years in business front and center, all 5 services listed, South Florida service area, phone number everywhere
-  - Must-not-dos: No pricing, no chatbots, keep it clean and simple
+  - Must-not-dos: No chatbots, keep it clean and simple
+  - Pricing: INCLUDED as of 2026-06-11 (owner decision — reverses earlier "no pricing" rule). Fortress Collection offer: $15K decoy tier + $35–55K premium tier
+  - Offer framework: "Hurricane-Proof Luxury Enclosure" / Fortress Collection with free $2,500 storm assessment
   - Services: Rescreens, Screen Enclosures, Pool Enclosures, Aluminum Roofs, Super Gutters
   - Service area: All of South Florida (Broward County primary + Miami-Dade, Palm Beach)
 
@@ -73,7 +75,7 @@
 ## Behavioral Rules
 - Primary CTA is always the phone number — never buried
 - Tone: "Your neighbor's trusted contractor for 50+ years" + "Licensed, professional, expert"
-- No pricing pages
+- Pricing: shown via Fortress Collection tiers (owner reversed the earlier "no pricing" rule on 2026-06-11)
 - No chatbots
 - Mobile-first (most local service searches are on phones)
 - Every page section must load fast — no heavy JS frameworks

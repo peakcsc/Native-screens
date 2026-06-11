@@ -87,17 +87,25 @@ document.addEventListener('keydown', e => {
 // ═══ CONTACT FORM ═══
 function handleSubmit(e) {
   e.preventDefault();
-  const name    = document.getElementById('name').value.trim();
-  const phone   = document.getElementById('phone').value.trim();
-  const service = document.getElementById('service').value;
-  const message = document.getElementById('message').value.trim();
-  const subject = encodeURIComponent(`Website Inquiry — ${service || 'General'}`);
-  const body    = encodeURIComponent(
-    `Name: ${name}\nPhone: ${phone}\nService: ${service}\nMessage: ${message}\n\n(Sent from nativescreens.com)`
+  const address  = document.getElementById('address').value.trim();
+  const phone    = document.getElementById('phone').value.trim();
+  const email    = document.getElementById('email').value.trim();
+  const status   = document.getElementById('status').value;
+  const value    = document.getElementById('value').value;
+  const timeline = document.getElementById('timeline').value;
+  const subject  = encodeURIComponent('Free $2,500 Assessment Request — Native Screens');
+  const body     = encodeURIComponent(
+    `New assessment request from nativescreens.com:\n\n` +
+    `Property Address: ${address}\n` +
+    `Phone: ${phone}\n` +
+    `Email: ${email}\n` +
+    `Current Enclosure Status: ${status}\n` +
+    `Property Value Range: ${value}\n` +
+    `Timeline: ${timeline}\n`
   );
   window.location.href = `mailto:peakcsc@gmail.com?subject=${subject}&body=${body}`;
   e.target.reset();
-  alert("Thank you! We'll be in touch within 1 business day.");
+  alert("Thank you! We'll call to schedule your free assessment within 1 business day.");
 }
 
 // ═══ SMOOTH SCROLL ═══
