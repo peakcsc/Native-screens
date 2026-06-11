@@ -39,6 +39,8 @@ const galleryImages = [
     alt: 'Pool enclosure with fire pit — Native Screens' },
   { src: 'assets/images/gallery-pool-5.jpg',
     alt: 'Screen enclosure — Native Screens South Florida' },
+  { src: 'assets/images/service-super-gutter.jpg',
+    alt: 'Aluminum roof patio — Native Screens South Florida' },
 ];
 
 function buildSlider() {
