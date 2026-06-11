@@ -3,14 +3,15 @@
 // Year in footer
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Hero video — 2× speed, works on iOS (must set after loadedmetadata)
-const heroVideo = document.getElementById('heroVideo');
-if (heroVideo) {
-  const setSpeed = () => { heroVideo.playbackRate = 2.0; };
-  heroVideo.addEventListener('loadedmetadata', setSpeed);
-  heroVideo.addEventListener('play', setSpeed);
+// Videos — 2× speed, works on iOS (must set after loadedmetadata)
+['heroVideo', 'secondVideo'].forEach(id => {
+  const v = document.getElementById(id);
+  if (!v) return;
+  const setSpeed = () => { v.playbackRate = 2.0; };
+  v.addEventListener('loadedmetadata', setSpeed);
+  v.addEventListener('play', setSpeed);
   setSpeed();
-}
+});
 
 // Mobile nav toggle
 const hamburger = document.getElementById('hamburger');

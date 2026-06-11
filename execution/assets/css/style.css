@@ -798,6 +798,24 @@ ul { list-style: none; }
 }
 
 /* ═══════════════════════════════════════
+   SECOND VIDEO
+   ═══════════════════════════════════════ */
+.second-video-section {
+  width: 100%;
+  line-height: 0;
+  overflow: hidden;
+}
+.second-video {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+  display: block;
+}
+@media (max-width: 640px) {
+  .second-video { height: 100svh; }
+}
+
+/* ═══════════════════════════════════════
    TWO PROBLEMS SOLVED
    ═══════════════════════════════════════ */
 .problems-solved {
