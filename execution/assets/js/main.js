@@ -14,8 +14,10 @@ navLinks.querySelectorAll('a').forEach(link => {
 // ═══ GALLERY — Auto Slider ═══
 // Add your real photos here. hero-bg.jpg is your first real photo.
 const galleryImages = [
-  { src: 'assets/images/hero-bg.jpg',
+  { src: 'assets/images/gallery-pool-enclosure-2.jpg',
     alt: 'Pool enclosure by Native Screens — South Florida' },
+  { src: 'assets/images/hero-bg.jpg',
+    alt: 'Screen enclosure project by Native Screens — Broward County' },
   { src: 'https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=800&h=800&fit=crop&q=80',
     alt: 'Screen enclosure project — Broward County' },
   { src: 'https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&h=800&fit=crop&q=80',
