@@ -34,20 +34,6 @@ const galleryImages = [
     alt: 'Pool enclosure by Native Screens — South Florida' },
   { src: 'assets/images/hero-bg.jpg',
     alt: 'Screen enclosure project by Native Screens — Broward County' },
-  { src: 'https://images.unsplash.com/photo-1518495973542-4542c06a5843?w=800&h=800&fit=crop&q=80',
-    alt: 'Screen enclosure project — Broward County' },
-  { src: 'https://images.unsplash.com/photo-1472396961693-142e6e269027?w=800&h=800&fit=crop&q=80',
-    alt: 'Outdoor enclosure — South Florida' },
-  { src: 'https://images.unsplash.com/photo-1505142468610-359e7d316be0?w=800&h=800&fit=crop&q=80',
-    alt: 'Pool area — Fort Lauderdale, FL' },
-  { src: 'https://images.unsplash.com/photo-1482881497185-d4a9ddbe4151?w=800&h=800&fit=crop&q=80',
-    alt: 'Aluminum roof patio — Broward County' },
-  { src: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&h=800&fit=crop&q=80',
-    alt: 'Luxury pool enclosure — South Florida' },
-  { src: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&h=800&fit=crop&q=80',
-    alt: 'Home exterior — Hollywood FL' },
-  { src: 'https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&h=800&fit=crop&q=80',
-    alt: 'Residential project — Coral Springs FL' },
 ];
 
 function buildSlider() {
