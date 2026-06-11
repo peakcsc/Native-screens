@@ -836,6 +836,22 @@ ul { list-style: none; }
   padding: 1rem 2rem;
 }
 
+.solved-img-wrap {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto 1.5rem;
+  border: 4px solid var(--amber);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+}
+.solved-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 .solved-icon {
   font-size: 4rem;
   display: block;
