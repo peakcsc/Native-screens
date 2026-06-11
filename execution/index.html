@@ -88,12 +88,26 @@
     </div>
   </section>
 
-  <!-- ═══ SECOND VIDEO ═══ -->
-  <section class="second-video-section">
-    <video autoplay muted loop playsinline preload="auto" class="second-video" id="secondVideo">
-      <source src="assets/images/hero-video-2.mp4" type="video/mp4" />
-    </video>
+  <!-- ═══ GALLERY ═══ -->
+  <section class="gallery-section" id="gallery">
+    <div class="gallery-header">
+      <p class="section-eyebrow">Our Work</p>
+      <h2 class="section-title">Project Gallery</h2>
+      <p class="section-sub">Real projects. Real South Florida homes.</p>
+    </div>
+    <div class="scroll-container">
+      <div class="infinite-scroll" id="sliderTrack"></div>
+    </div>
+    <div class="gallery-footer">
+      <p class="gallery-note">See more on <a href="https://www.facebook.com/nativescreens" target="_blank" rel="noopener">Facebook</a> and <a href="https://www.instagram.com/nativescreens" target="_blank" rel="noopener">Instagram</a></p>
+    </div>
   </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
+    <img id="lightboxImg" src="" alt="" />
+  </div>
 
   <!-- ═══ TWO PROBLEMS SOLVED ═══ -->
   <section class="problems-solved">
@@ -212,26 +226,6 @@
     </div>
   </section>
 
-  <!-- ═══ GALLERY ═══ -->
-  <section class="gallery-section" id="gallery">
-    <div class="gallery-header">
-      <p class="section-eyebrow">Our Work</p>
-      <h2 class="section-title">Project Gallery</h2>
-      <p class="section-sub">Real projects. Real South Florida homes.</p>
-    </div>
-    <div class="scroll-container">
-      <div class="infinite-scroll" id="sliderTrack"></div>
-    </div>
-    <div class="gallery-footer">
-      <p class="gallery-note">See more on <a href="#" target="_blank" rel="noopener">Facebook</a> and <a href="#" target="_blank" rel="noopener">Instagram</a></p>
-    </div>
-  </section>
-
-  <!-- Lightbox -->
-  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-    <button class="lightbox-close" onclick="closeLightbox()">✕</button>
-    <img id="lightboxImg" src="" alt="" />
-  </div>
 
   <!-- ═══ REVIEWS ═══ -->
   <section class="section reviews-section" id="reviews">
