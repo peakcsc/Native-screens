@@ -735,6 +735,11 @@ ul { list-style: none; }
     box-shadow: 0 8px 24px rgba(0,0,0,0.1);
     z-index: 99;
   }
+  .nav-links.open a {
+    font-size: 1.05rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
   .hamburger { display: flex; }
   .about-grid { grid-template-columns: 1fr; }
   .about-image { order: -1; }
@@ -744,12 +749,55 @@ ul { list-style: none; }
   .footer-grid { grid-template-columns: 1fr 1fr; gap: 2rem; }
 }
 
+/* Hamburger → X animation when nav is open */
+.hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.hamburger span { transition: transform 0.25s, opacity 0.25s; }
+
 @media (max-width: 640px) {
-  .section { padding: 3.5rem 0; }
-  .hero { min-height: 92vh; }
+  .section { padding: 3rem 0; }
+  .hero { min-height: 100svh; }
+  .hero-logo { width: min(700px, 95vw); }
+  .btn-hero { width: 100%; justify-content: center; font-size: 1rem; padding: 1rem 1.25rem; }
+  .trust-badges { gap: 0.5rem; }
+  .badge { font-size: 0.78rem; padding: 0.35rem 0.75rem; }
   .nav-phone span:not(.phone-icon) { display: none; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .area-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; }
   .services-grid { grid-template-columns: 1fr; }
+  .reviews-grid { grid-template-columns: 1fr; }
+  .contact-form { padding: 1.5rem; }
+  .section-title { font-size: clamp(1.5rem, 5vw, 2rem); }
+  .section-sub { font-size: 0.95rem; }
+  /* Extra bottom padding so content isn't hidden behind sticky CTA */
+  body { padding-bottom: 68px; }
+}
+
+/* ── Sticky mobile call bar ── */
+.mobile-cta-bar {
+  display: none;
+}
+@media (max-width: 640px) {
+  .mobile-cta-bar {
+    display: flex;
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    z-index: 200;
+    background: #111111;
+    color: #fff;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    padding: 1rem 1.5rem;
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.3);
+    /* Safe area for notched iPhones */
+    padding-bottom: calc(1rem + env(safe-area-inset-bottom));
+  }
+  .mobile-cta-bar:active { background: #333; }
 }

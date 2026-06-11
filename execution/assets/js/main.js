@@ -6,9 +6,15 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // Mobile nav toggle
 const hamburger = document.getElementById('hamburger');
 const navLinks  = document.getElementById('navLinks');
-hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+hamburger.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+  hamburger.classList.toggle('open');
+});
 navLinks.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => navLinks.classList.remove('open'));
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    hamburger.classList.remove('open');
+  });
 });
 
 // ═══ GALLERY — Auto Slider ═══
@@ -53,6 +59,13 @@ function buildSlider() {
 }
 
 buildSlider();
+
+// Pause slider on touch devices
+const sliderTrack = document.getElementById('sliderTrack');
+if (sliderTrack) {
+  sliderTrack.addEventListener('touchstart', () => sliderTrack.style.animationPlayState = 'paused', { passive: true });
+  sliderTrack.addEventListener('touchend',   () => sliderTrack.style.animationPlayState = 'running', { passive: true });
+}
 
 // ═══ LIGHTBOX ═══
 function openLightboxImg(src, alt) {
