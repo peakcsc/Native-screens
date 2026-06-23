@@ -412,8 +412,7 @@
       <p class="section-eyebrow">Get Started</p>
       <h2 class="section-title" style="text-align:center;">Request Your Free Estimate</h2>
       <p class="section-sub" style="text-align:center;margin:0 auto 2.5rem;">Fill out the form below and we'll reach out within 1 business day to schedule your free on-site estimate.</p>
-      <form class="lead-form" name="estimate" method="POST" data-netlify="true" netlify-honeypot="bot-field" action="/thank-you">
-        <input type="hidden" name="form-name" value="estimate" />
+      <form class="lead-form" id="estimateForm" onsubmit="handleSubmit(event)">
         <p style="display:none;"><input name="bot-field" /></p>
         <div class="lead-form-grid">
           <div class="form-group">
