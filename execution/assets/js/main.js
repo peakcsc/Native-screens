@@ -108,25 +108,27 @@ document.addEventListener('keydown', e => {
 });
 
 // ═══ CONTACT FORM ═══
-function handleSubmit(e) {
+const WEBHOOK_URL = 'https://services.leadconnectorhq.com/hooks/8k72YlRQYGqHlj2svRqj/webhook-trigger/f4792cd6-9221-49d4-b051-08e5f44db4f7';
+
+async function handleSubmit(e) {
   e.preventDefault();
-  const address  = document.getElementById('address').value.trim();
-  const phone    = document.getElementById('phone').value.trim();
-  const email    = document.getElementById('email').value.trim();
-  const status   = document.getElementById('status').value;
-  const value    = document.getElementById('value').value;
-  const timeline = document.getElementById('timeline').value;
-  const subject  = encodeURIComponent('Free $2,500 Assessment Request — Native Screens');
-  const body     = encodeURIComponent(
-    `New assessment request from nativescreens.com:\n\n` +
-    `Property Address: ${address}\n` +
-    `Phone: ${phone}\n` +
-    `Email: ${email}\n` +
-    `Current Enclosure Status: ${status}\n` +
-    `Property Value Range: ${value}\n` +
-    `Timeline: ${timeline}\n`
-  );
-  window.location.href = `mailto:peakcsc@gmail.com?subject=${subject}&body=${body}`;
+  const payload = {
+    name:     document.getElementById('lf-name').value.trim(),
+    phone:    document.getElementById('lf-phone').value.trim(),
+    email:    document.getElementById('lf-email').value.trim(),
+    address:  document.getElementById('lf-address').value.trim(),
+    service:  document.getElementById('lf-service').value,
+    timeline: document.getElementById('lf-timeline').value,
+    message:  document.getElementById('lf-message').value.trim(),
+    source:   'nativescreens.com',
+  };
+  try {
+    await fetch(WEBHOOK_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload),
+    });
+  } catch (_) {}
   e.target.reset();
   alert("Thank you! We'll call to schedule your free assessment within 1 business day.");
 }
