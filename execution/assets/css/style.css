@@ -112,11 +112,19 @@ ul { list-style: none; }
    NAVIGATION
    ═══════════════════════════════════════ */
 .site-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 100;
-  background: #fff;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  background: transparent;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.site-header.scrolled {
+  background: rgba(12,31,40,0.96);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+  backdrop-filter: blur(6px);
 }
 
 .nav-container {
