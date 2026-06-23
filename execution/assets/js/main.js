@@ -141,3 +141,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     window.scrollTo({ top, behavior: 'smooth' });
   });
 });
+
+// Transparent nav — add dark bg after scrolling past hero
+const siteHeader = document.querySelector('.site-header');
+function updateHeader() {
+  const heroHeight = document.getElementById('hero')?.offsetHeight || 80;
+  siteHeader.classList.toggle('scrolled', window.scrollY > heroHeight * 0.6);
+}
+window.addEventListener('scroll', updateHeader, { passive: true });
+updateHeader();
