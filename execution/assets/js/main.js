@@ -125,6 +125,7 @@ async function handleSubmit(e) {
   try {
     await fetch(WEBHOOK_URL, {
       method: 'POST',
+      mode: 'no-cors',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(payload),
     });
