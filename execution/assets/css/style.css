@@ -168,16 +168,17 @@ ul { list-style: none; }
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  background: var(--teal);
-  color: #fff;
-  padding: 0.5rem 1.25rem;
+  background: var(--amber);
+  color: #1C2B33;
+  padding: 0.55rem 1.35rem;
   border-radius: 50px;
-  font-weight: 700;
-  font-size: 0.95rem;
+  font-weight: 800;
+  font-size: 0.98rem;
   flex-shrink: 0;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.35);
   transition: background 0.15s;
 }
-.nav-phone:hover { background: var(--teal-dark); color: #fff; }
+.nav-phone:hover { background: var(--amber-dark); color: #1C2B33; }
 
 .hamburger {
   display: none;
