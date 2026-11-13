@@ -208,3 +208,24 @@ async function handleQuote(e) {
   const success = document.getElementById('quoteSuccess');
   if (form && success) { form.hidden = true; success.hidden = false; }
 }
+
+// ═══ Hero rotating Google reviews ═══
+const HERO_REVIEWS = [
+  { q: '"The quality of the work exceeded my expectations. I couldn\'t be happier!"', a: '— Angelina H.' },
+  { q: '"Fast, efficient, good work, respectful and really professional."', a: '— Bosco M.' },
+  { q: '"Great owner."', a: '— Marisa M.' },
+];
+(function () {
+  const q = document.getElementById('hrQuote'), a = document.getElementById('hrAuthor');
+  if (!q || !a) return;
+  let i = 0;
+  setInterval(() => {
+    i = (i + 1) % HERO_REVIEWS.length;
+    q.style.opacity = 0; a.style.opacity = 0;
+    setTimeout(() => {
+      q.textContent = HERO_REVIEWS[i].q;
+      a.textContent = HERO_REVIEWS[i].a;
+      q.style.opacity = 1; a.style.opacity = 1;
+    }, 400);
+  }, 4500);
+})();

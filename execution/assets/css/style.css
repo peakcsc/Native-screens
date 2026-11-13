@@ -1523,3 +1523,34 @@ ul { list-style: none; }
 /* trust-point icons (SVG, not emoji) */
 .tp-icon { color: var(--teal); display: inline-flex; align-items: center; justify-content: center; }
 .tp-icon svg { display: block; }
+
+/* ═══ Compact services tiles ═══ */
+.services-compact {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem; max-width: 920px; margin: 1.75rem auto 0;
+}
+.svc-tile {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  gap: 0.4rem; padding: 1.4rem 1rem; border: 1px solid var(--border);
+  border-radius: 12px; text-decoration: none; color: var(--charcoal); background: #fff;
+  transition: border-color 0.15s, transform 0.15s, box-shadow 0.15s;
+}
+.svc-tile:hover { border-color: var(--teal); transform: translateY(-3px); box-shadow: var(--shadow); }
+.svc-tile svg { color: var(--teal); }
+.svc-tile strong { font-size: 1rem; }
+.svc-tile span { font-size: 0.82rem; color: var(--gray); line-height: 1.3; }
+
+/* ═══ Hero rotating Google reviews ═══ */
+.hero-reviews {
+  background: rgba(12,31,40,0.5);
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 12px; padding: 0.85rem 1.1rem;
+  max-width: 440px; margin: 0 0 1.4rem;
+}
+.hr-top { display: flex; align-items: center; gap: 0.6rem; margin-bottom: 0.3rem; }
+.hr-stars { color: var(--amber); letter-spacing: 1px; font-size: 1rem; }
+.hr-rating { font-size: 0.8rem; font-weight: 700; color: #cfe0e6; }
+.hr-quote { font-size: 0.95rem; font-weight: 500; margin: 0 0 0.25rem; line-height: 1.4; color: #fff; transition: opacity 0.4s; }
+.hr-author { font-size: 0.8rem; color: #cfe0e6; margin: 0; font-weight: 600; transition: opacity 0.4s; }
+@media (max-width: 860px) { .hero-reviews { margin-left: auto; margin-right: auto; } }
