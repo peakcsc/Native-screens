@@ -128,7 +128,16 @@ async function handleSubmit(e) {
     navigator.sendBeacon(WEBHOOK_URL, fd);
   } catch (_) {}
   e.target.reset();
-  alert("Thank you! We'll call to schedule your free assessment within 1 business day.");
+  // Show inline success message instead of a popup
+  const form = document.getElementById('estimateForm');
+  const success = document.getElementById('formSuccess');
+  if (form && success) {
+    form.hidden = true;
+    success.hidden = false;
+    success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  } else {
+    alert("Thank you! We'll call you within 1 business day.");
+  }
 }
 
 // ═══ SMOOTH SCROLL ═══
