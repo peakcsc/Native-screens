@@ -159,3 +159,52 @@ function updateHeader() {
 }
 window.addEventListener('scroll', updateHeader, { passive: true });
 updateHeader();
+
+// ═══ HERO QUOTE FORM (name + phone + photo) ═══
+const CLOUDINARY_CLOUD = 'cew3ro6s';
+const CLOUDINARY_PRESET = 'native_screens_quotes';
+
+// Show chosen photo's filename on the label
+const qPhoto = document.getElementById('q-photo');
+if (qPhoto) {
+  qPhoto.addEventListener('change', () => {
+    const label = document.getElementById('q-photo-label');
+    const f = qPhoto.files && qPhoto.files[0];
+    if (label) label.textContent = f ? ('Photo added: ' + (f.name.length > 22 ? f.name.slice(0, 20) + '…' : f.name)) : 'Add a photo of your screen';
+  });
+}
+
+async function handleQuote(e) {
+  e.preventDefault();
+  const btn = document.getElementById('q-submit');
+  if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+
+  // 1) Upload the photo to Cloudinary (if one was chosen)
+  let photoUrl = '';
+  try {
+    const file = qPhoto && qPhoto.files && qPhoto.files[0];
+    if (file) {
+      const cf = new FormData();
+      cf.append('file', file);
+      cf.append('upload_preset', CLOUDINARY_PRESET);
+      const resp = await fetch(`https://api.cloudinary.com/v1_1/${CLOUDINARY_CLOUD}/image/upload`, { method: 'POST', body: cf });
+      const data = await resp.json();
+      photoUrl = data.secure_url || '';
+    }
+  } catch (_) {}
+
+  // 2) Send the lead to GoHighLevel (sendBeacon avoids CORS)
+  try {
+    const fd = new FormData();
+    fd.append('name',   document.getElementById('q-name').value.trim());
+    fd.append('phone',  document.getElementById('q-phone').value.trim());
+    fd.append('photo',  photoUrl);
+    fd.append('source', 'nativescreens.com — hero quote');
+    navigator.sendBeacon(WEBHOOK_URL, fd);
+  } catch (_) {}
+
+  // 3) Show success
+  const form = document.getElementById('quoteForm');
+  const success = document.getElementById('quoteSuccess');
+  if (form && success) { form.hidden = true; success.hidden = false; }
+}

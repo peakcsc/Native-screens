@@ -108,14 +108,35 @@
       <source src="assets/images/hero-video.mp4" type="video/mp4" />
     </video>
     <div class="hero-overlay"></div>
-    <div class="hero-content">
-      <p class="hero-eyebrow">Serving South Florida Since 1972</p>
-      <img src="assets/images/logo-final.png" alt="Native Screens — Screen Enclosures South Florida" class="hero-logo" />
-      <h1 class="hero-headline">South Florida's Luxury Enclosure Specialists Since 1972</h1>
-      <div class="hero-ctas">
-        <a href="#contact" class="btn btn-hero-call">
-          Request Estimate
-        </a>
+    <div class="hero-content hero-grid">
+      <div class="hero-left">
+        <p class="hero-eyebrow">Serving South Florida Since 1972</p>
+        <img src="assets/images/logo-final.png" alt="Native Screens — Screen Enclosures South Florida" class="hero-logo" />
+        <h1 class="hero-headline">Screen &amp; Pool Enclosures, Done Right.</h1>
+        <p class="hero-sub">Rescreens, pool cages &amp; new enclosures across South Florida. Family-owned since 1972. Licensed &amp; insured.</p>
+        <a href="tel:+19549660163" class="btn btn-hero-call">Call (954) 966-0163</a>
+      </div>
+      <div class="hero-right">
+        <form class="quote-card" id="quoteForm" onsubmit="handleQuote(event)">
+          <h2 class="quote-title">Get a Fast Quote</h2>
+          <p class="quote-sub">Add a photo of your screen and we'll get right back to you.</p>
+          <input type="text" id="q-name" name="name" required placeholder="Your name" autocomplete="name" />
+          <input type="tel" id="q-phone" name="phone" required placeholder="Phone number" autocomplete="tel" inputmode="tel" />
+          <label class="quote-photo" for="q-photo">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+            <span id="q-photo-label">Add a photo of your screen</span>
+          </label>
+          <input type="file" id="q-photo" name="photo" accept="image/*" capture="environment" hidden />
+          <button type="submit" class="btn btn-quote" id="q-submit">Get My Quote</button>
+          <p class="quote-note">No obligation. A real person replies — fast.</p>
+        </form>
+        <div class="quote-success" id="quoteSuccess" hidden>
+          <div class="qs-check" aria-hidden="true">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+          </div>
+          <h3>Thanks — got it!</h3>
+          <p>We'll reach out shortly to set up your estimate. Need us now? <a href="tel:+19549660163">(954) 966-0163</a></p>
+        </div>
       </div>
     </div>
   </section>
@@ -226,36 +247,23 @@
       <div class="about-content">
         <p class="section-eyebrow">Our Story</p>
         <h2>Why South Florida Trusts Native Screens</h2>
-        <p class="about-lead">For over 50 years, Native Screens has been protecting South Florida families' outdoor spaces — one pool, one patio, one enclosure at a time.</p>
-        <p>We're not a franchise. We're not a chain. We're a family business rooted right here in Broward County, and we take pride in every job we do — just like we have since the 1970s.</p>
+        <p class="about-lead">Family-owned in Broward County since 1972 — not a franchise, not a chain. You deal with us directly, and we take pride in every job.</p>
         <div class="trust-points">
           <div class="trust-point">
-            <span class="tp-icon">🏆</span>
-            <div>
-              <strong>50+ Years of Experience</strong>
-              <p>Decades of expertise means no surprise, no guesswork — just results.</p>
-            </div>
+            <span class="tp-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg></span>
+            <div><strong>50+ Years Experience</strong><p>Decades of expertise — no guesswork, just results.</p></div>
           </div>
           <div class="trust-point">
-            <span class="tp-icon">👨‍👩‍👧</span>
-            <div>
-              <strong>Family Owned &amp; Operated</strong>
-              <p>You deal with us directly — not a salesperson or subcontractor.</p>
-            </div>
+            <span class="tp-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <div><strong>Family Owned</strong><p>No salesperson, no subcontractor — just us.</p></div>
           </div>
           <div class="trust-point">
-            <span class="tp-icon">✅</span>
-            <div>
-              <strong>Licensed &amp; Insured</strong>
-              <p>Fully licensed Florida contractor. Your home is protected.</p>
-            </div>
+            <span class="tp-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></span>
+            <div><strong>Licensed &amp; Insured</strong><p>Fully licensed Florida contractor.</p></div>
           </div>
           <div class="trust-point">
-            <span class="tp-icon">💰</span>
-            <div>
-              <strong>Request an Estimate</strong>
-              <p>No pressure, no fees. Call us and we'll come take a look.</p>
-            </div>
+            <span class="tp-icon"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <div><strong>Honest Quotes</strong><p>No pressure, no fees — we come take a look.</p></div>
           </div>
         </div>
         <a href="tel:+19549660163" class="btn btn-primary">Call Now — (954) 966-0163</a>
