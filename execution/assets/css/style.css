@@ -1554,3 +1554,55 @@ ul { list-style: none; }
 .hr-quote { font-size: 0.95rem; font-weight: 500; margin: 0 0 0.25rem; line-height: 1.4; color: #fff; transition: opacity 0.4s; }
 .hr-author { font-size: 0.8rem; color: #cfe0e6; margin: 0; font-weight: 600; transition: opacity 0.4s; }
 @media (max-width: 860px) { .hero-reviews { margin-left: auto; margin-right: auto; } }
+
+/* ═══ Mobile hero: fit reviews + quote form above the fold ═══ */
+@media (max-width: 860px) {
+  .hero { min-height: 100svh; padding-top: 62px; padding-bottom: 0.75rem; align-items: center; }
+  .hero-grid { gap: 0.7rem; }
+  .hero-left { display: flex; flex-direction: column; align-items: center; }
+  .hero-left .hero-eyebrow { display: none; }
+  .hero-logo { width: min(130px, 34vw); margin: 0 0 0.45rem; }
+  .hero-headline { font-size: clamp(1.15rem, 5vw, 1.5rem); line-height: 1.15; margin: 0 0 0.55rem; }
+  .hero-left .btn-hero-call { display: none; }            /* sticky Call bar covers this */
+  .hero-reviews { padding: 0.55rem 0.85rem; margin: 0 auto 0.7rem; }
+  .hr-top { margin-bottom: 0.2rem; }
+  .hr-quote { font-size: 0.82rem; margin-bottom: 0.15rem; }
+  .hr-author { font-size: 0.74rem; }
+  .quote-card { padding: 1rem 1rem; }
+  .quote-title { font-size: 1.15rem; }
+  .quote-sub { font-size: 0.8rem; margin-bottom: 0.7rem; }
+  .quote-card input[type="text"], .quote-card input[type="tel"] { padding: 0.62rem 0.8rem; margin-bottom: 0.5rem; font-size: 0.95rem; }
+  .quote-photo { padding: 0.6rem; margin-bottom: 0.6rem; font-size: 0.88rem; }
+  .btn-quote { padding: 0.72rem; font-size: 1rem; }
+  .quote-note { margin-top: 0.5rem; font-size: 0.72rem; }
+}
+
+/* ═══ Mobile hero v2: tighter, guarantee form+reviews above fold ═══ */
+@media (max-width: 860px) {
+  .hero { padding-top: 56px; padding-bottom: 0.6rem; }
+  .hero-logo { width: 88px; margin: 0 0 0.35rem; }
+  .hero-headline { font-size: 1.08rem; line-height: 1.14; margin: 0 0 0.45rem; max-width: 330px; }
+  .hero-reviews { padding: 0.5rem 0.8rem; margin: 0 auto 0.6rem; max-width: 330px; }
+  .hr-quote { font-size: 0.8rem; line-height: 1.3; }
+  .quote-card { padding: 0.9rem 0.95rem; }
+  .quote-title { font-size: 1.1rem; }
+  .quote-sub { display: none; }                 /* save space on mobile */
+  .quote-card input[type="text"], .quote-card input[type="tel"] { padding: 0.6rem 0.75rem; margin-bottom: 0.45rem; }
+  .quote-photo { padding: 0.55rem; margin-bottom: 0.55rem; }
+  .btn-quote { padding: 0.7rem; }
+  .quote-note { margin-top: 0.45rem; }
+}
+
+/* Mobile headline size fix (override .hero h1 base rule) */
+@media (max-width: 860px) {
+  .hero h1.hero-headline { font-size: 1.15rem; line-height: 1.16; margin: 0 0 0.5rem; max-width: 320px; }
+}
+
+/* Mobile: keep hero content clear of the sticky Call bar + final tighten */
+@media (max-width: 860px) {
+  .hero { padding-bottom: 66px; }
+  .hero-logo { width: 80px; margin-bottom: 0.3rem; }
+  .hero-reviews { margin-bottom: 0.5rem; }
+  .quote-card { padding: 0.85rem 0.95rem; }
+  .quote-note { font-size: 0.7rem; margin-top: 0.4rem; }
+}
