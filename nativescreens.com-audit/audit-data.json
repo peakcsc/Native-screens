@@ -1,0 +1,145 @@
+{
+  "summary": {
+    "health_score": 78,
+    "business_type": "Local Service — Screen/Pool Enclosure Contractor (Broward County, FL)",
+    "top_findings": [
+      "Homepage service tiles all link to #hero instead of the dedicated service pages — wasted internal-linking and UX",
+      "3 of 5 services (Screen Enclosures, Aluminum Roofs, Super Gutters) have no dedicated page — thin coverage for those keywords",
+      "Only 7 Google reviews — the single biggest lever for map-pack rank and AI-answer citation",
+      "LocalBusiness schema has no streetAddress and no individual Review objects backing the 5.0 aggregateRating",
+      "No llms.txt / GEO file; location pages carry FAQ schema but no LocalBusiness/Breadcrumb schema"
+    ],
+    "quick_wins": [
+      "Repoint the 5 homepage service tiles to their matching pages (pool + rescreen exist today)",
+      "Add a BreadcrumbList + LocalBusiness block to the 7 sub-pages",
+      "Publish /llms.txt so ChatGPT/Perplexity can read the business cleanly",
+      "Add 3-4 Review objects to the homepage schema to legitimately support aggregateRating",
+      "Launch a review drive: QR + text-link to go from 7 to 25+ Google reviews"
+    ]
+  },
+  "categories": [
+    {
+      "name": "Technical SEO",
+      "score": 90,
+      "what_works": [
+        "robots.txt present, allows all, and references the sitemap",
+        "sitemap.xml lists all 8 pages with priorities",
+        "Canonical tags on every page; HTTPS with valid SSL; single H1 per page",
+        "Mobile viewport + responsive layout, sticky click-to-call bar"
+      ],
+      "findings": [
+        {"title": "Hero autoplay MP4 may hurt mobile LCP and data use", "severity": "Medium", "description": "The homepage autoplays a looping hero-video.mp4. On mobile this can delay Largest Contentful Paint and burn cellular data. Field CWV could not be measured from this environment (proxy blocks PageSpeed/CrUX).", "recommendation": "Keep the poster image as LCP element, lazy-init the video after load, and ship a compressed <=1.5MB 720p MP4; consider a static hero on slow connections."},
+        {"title": "Core Web Vitals not field-verified", "severity": "Info", "description": "PageSpeed Insights and CrUX field data require network access unavailable in this cloud audit.", "recommendation": "Run PageSpeed Insights on the live URL (or /seo google with Search Console connected) to confirm LCP/INP/CLS."}
+      ]
+    },
+    {
+      "name": "On-Page SEO",
+      "score": 72,
+      "what_works": [
+        "Keyword-rich, length-appropriate title tags and meta descriptions on every page",
+        "Unique titles/descriptions across all 8 pages; phone number in the homepage title",
+        "Clean semantic headings and descriptive internal anchor text in the footer"
+      ],
+      "findings": [
+        {"title": "Service tiles link to #hero, not the service pages", "severity": "High", "description": "All five .svc-tile cards in the Services section point to #hero (the quote form) instead of the corresponding service page. This wastes the strongest on-page internal links and sends users to a form instead of the content that converts.", "recommendation": "Point Rescreens -> /rescreens-screen-repair.html and Pool Enclosures -> /pool-enclosures-south-florida.html now; point the other three to their pages once built."},
+        {"title": "Homepage H1 omits the core keyword", "severity": "Medium", "description": "H1 is 'South Florida's Luxury Enclosure Specialists'. Strong for brand/positioning but it drops the highest-intent term 'screen & pool enclosures'. The title tag covers it, but the H1 is a ranking and relevance signal.", "recommendation": "Consider an H1 like 'South Florida's Luxury Screen & Pool Enclosure Specialists' (keeps the luxury angle, adds the keyword)."}
+      ]
+    },
+    {
+      "name": "Content Quality",
+      "score": 76,
+      "what_works": [
+        "Genuine, specific E-E-A-T signals: 50+ years, family-owned, owner named (Larry), licensed & insured",
+        "Two useful cost guides and five local/service pages with distinct, non-duplicated copy",
+        "Real Google review text on-page; clear, honest, non-salesy tone"
+      ],
+      "findings": [
+        {"title": "Three services have no dedicated page", "severity": "High", "description": "Screen Enclosures, Aluminum Roofs, and Super Gutters exist only as homepage tiles. There is no rankable page for 'screen enclosure Broward', 'aluminum patio roof South Florida', or 'super gutters Florida'.", "recommendation": "Build three service pages mirroring the depth of the pool/rescreen pages (what it is, benefits, options, local angle, FAQ schema, CTA)."},
+        {"title": "No author/owner E-E-A-T entity page", "severity": "Low", "description": "Owner 'Larry' and the 1972 legacy are strong trust signals but have no dedicated About-the-owner content for Google/AI to cite.", "recommendation": "Add a short owner bio / company history block or page to strengthen authorship signals."}
+      ]
+    },
+    {
+      "name": "Schema / Structured Data",
+      "score": 74,
+      "what_works": [
+        "Valid HomeAndConstructionBusiness + FAQPage JSON-LD on the homepage (both parse clean)",
+        "Valid FAQPage + Article schema across the cost guides and location/service pages",
+        "OfferCatalog lists all five services; geo coordinates and opening hours present"
+      ],
+      "findings": [
+        {"title": "aggregateRating not backed by on-page Review objects", "severity": "Medium", "description": "The homepage declares aggregateRating 5.0 / 7 but includes no individual Review items. Google discourages self-serving aggregateRating for LocalBusiness without reviews on the same page and may ignore or flag it.", "recommendation": "Add 3-4 Review objects (the Angelina/Bosco/Xavier reviews already on the page) inside the schema to legitimately support the rating."},
+        {"title": "No streetAddress in PostalAddress", "severity": "Medium", "description": "Address has locality + region + country but no streetAddress. Full, consistent NAP matters for local pack and citation matching.", "recommendation": "Add the real street address (or a service-area business declaration) and keep it identical to the Google Business Profile."},
+        {"title": "Sub-pages lack LocalBusiness + BreadcrumbList schema", "severity": "Low", "description": "Location/service pages carry only FAQPage schema.", "recommendation": "Add a lightweight LocalBusiness reference and BreadcrumbList to each sub-page for richer eligibility."}
+      ]
+    },
+    {
+      "name": "AI Search Readiness (GEO)",
+      "score": 70,
+      "what_works": [
+        "Clean, crawlable static HTML with clear Q&A passages (FAQ) that AI answer engines favor",
+        "Cost guides answer high-intent questions directly in the first sentence (good for AI Overviews)",
+        "Entity consistency: name, phone, area served repeated site-wide"
+      ],
+      "findings": [
+        {"title": "No llms.txt", "severity": "Medium", "description": "There is no /llms.txt to give AI crawlers a clean map of the business and key pages.", "recommendation": "Publish /llms.txt with the business summary, services, service area, phone, and links to the cost/location pages."},
+        {"title": "Thin brand-mention / citation footprint", "severity": "High", "description": "AI answer engines cite businesses with reviews, directory listings, and third-party mentions. With 7 reviews and limited citations, Native Screens is unlikely to be named in AI answers for 'best screen enclosure in Fort Lauderdale'.", "recommendation": "Grow reviews and build consistent citations (next category); this is the same root issue the earlier /search audit surfaced."}
+      ]
+    },
+    {
+      "name": "Local SEO",
+      "score": 68,
+      "what_works": [
+        "Three dedicated city pages (Fort Lauderdale, Hollywood, Pembroke Pines) with genuine local detail",
+        "Full service-area list across Broward/Miami-Dade/Palm Beach; embedded Google map",
+        "Click-to-call everywhere; Google review link in header, trust bar, reviews section, and footer"
+      ],
+      "findings": [
+        {"title": "Only 7 Google reviews", "severity": "High", "description": "Review count and velocity are the dominant local-pack and AI-citation signals. 7 is low for a 50-year business and is the single highest-ROI fix.", "recommendation": "Run a review drive to 25+: text every recent happy customer the direct Google review link, print a QR card for the truck/invoice, and keep a steady trickle."},
+        {"title": "NAP completeness / GBP alignment unverified", "severity": "Medium", "description": "On-site NAP lacks a street address; Google Business Profile completeness and citation consistency could not be read from this environment.", "recommendation": "Confirm GBP is fully filled (services, photos, hours, description, products) and that name/address/phone match the site exactly."},
+        {"title": "Only 3 of the served cities have pages", "severity": "Medium", "description": "Coral Springs, Davie, Weston, Plantation, Miramar, Pompano, Boca Raton etc. are listed but have no page.", "recommendation": "Add 3-5 more city pages for the highest-population served cities, each with unique local content (avoid thin duplicates)."}
+      ]
+    },
+    {
+      "name": "Images",
+      "score": 85,
+      "what_works": [
+        "100% alt-text coverage on homepage images; descriptive, keyword-aware alts",
+        "Logo preloaded; hero has a poster fallback image"
+      ],
+      "findings": [
+        {"title": "Image dimensions/format not verifiable here", "severity": "Low", "description": "Could not measure byte sizes or confirm WebP/AVIF delivery from this environment.", "recommendation": "Serve hero/gallery images as WebP/AVIF with width/height attributes to protect CLS and LCP."}
+      ]
+    }
+  ],
+  "action_plan": {
+    "phases": [
+      {"name": "Phase 1: Quick Wins", "timeframe": "This week", "items": [
+        "Repoint the 5 homepage service tiles to their service pages (pool + rescreen live today)",
+        "Add the 3 on-page Review objects into the homepage aggregateRating schema",
+        "Publish /llms.txt",
+        "Start the review drive (QR card + direct review link) aiming for 25+ reviews"
+      ]},
+      {"name": "Phase 2: High-Impact Content", "timeframe": "Weeks 2-3", "items": [
+        "Build dedicated pages for Screen Enclosures, Aluminum Roofs, and Super Gutters",
+        "Add streetAddress (or service-area declaration) to schema, matched to GBP",
+        "Add LocalBusiness + BreadcrumbList schema to all sub-pages",
+        "Widen the homepage H1 to include 'screen & pool enclosure'"
+      ]},
+      {"name": "Phase 3: Authority & Reach", "timeframe": "Month 2", "items": [
+        "Add 3-5 more city pages for top served cities (unique local content)",
+        "Build consistent citations/directory listings (NAP identical everywhere)",
+        "Add an owner/company-history E-E-A-T block or page",
+        "Compress/convert hero media; verify Core Web Vitals via PageSpeed"
+      ]},
+      {"name": "Phase 4: Monitoring", "timeframe": "Ongoing", "items": [
+        "Connect Google Search Console; track AI-answer appearances and queries",
+        "Re-run this audit monthly; watch review count and map-pack position",
+        "Keep a steady review trickle and refresh gallery photos"
+      ]}
+    ]
+  },
+  "artifacts": {
+    "findings_dir": "findings/",
+    "screenshots_dir": "screenshots/"
+  }
+}
