@@ -1,1 +1,4 @@
 .netlify/
+
+# Search skill working folder (not part of the website)
+search-work/
