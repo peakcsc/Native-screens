@@ -212,8 +212,9 @@ async function handleQuote(e) {
 // ═══ Hero rotating Google reviews ═══
 const HERO_REVIEWS = [
   { q: '"The quality of the work exceeded my expectations. I couldn\'t be happier!"', a: '— Angelina H.' },
+  { q: '"Everyone was friendly, professional, and helpful. Smooth and stress-free!"', a: '— Xavier M.' },
   { q: '"Fast, efficient, good work, respectful and really professional."', a: '— Bosco M.' },
-  { q: '"Great owner."', a: '— Marisa M.' },
+  { q: '"Very professional from start to finish! Larry and his crew do a great job!"', a: '— Parker P.' },
 ];
 (function () {
   const q = document.getElementById('hrQuote'), a = document.getElementById('hrAuthor');
