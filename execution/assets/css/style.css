@@ -1621,3 +1621,33 @@ ul { list-style: none; }
 .footer-google .btn-outline:hover { background: var(--amber); color: var(--charcoal); }
 .fg-map iframe { display: block; }
 @media (max-width: 760px) { .footer-google { grid-template-columns: 1fr; gap: 1.25rem; padding-top: 1.5rem; } }
+
+/* ═══ Guide / cost pages ═══ */
+.guide-header {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0.9rem 1.5rem; background: var(--charcoal); position: sticky; top: 0; z-index: 50;
+}
+.guide-logo img { height: 42px; display: block; }
+.guide-phone { color: #fff; font-weight: 800; text-decoration: none; background: var(--amber); color: var(--charcoal); padding: 0.5rem 1.1rem; border-radius: 50px; font-size: 0.95rem; }
+.guide { background: #fff; padding: 2.5rem 1.25rem 3rem; }
+.guide-container { max-width: 760px; margin: 0 auto; color: var(--charcoal); }
+.guide-eyebrow { color: var(--teal); font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; font-size: 0.8rem; margin-bottom: 0.5rem; }
+.guide-container h1 { font-size: clamp(1.7rem, 4.5vw, 2.4rem); line-height: 1.15; margin-bottom: 1rem; }
+.guide-lead { font-size: 1.12rem; line-height: 1.6; color: #33434d; margin-bottom: 2rem; }
+.guide-container h2 { font-size: 1.4rem; margin: 2rem 0 0.75rem; }
+.guide-container h3 { font-size: 1.2rem; margin: 0 0 0.5rem; }
+.guide-container p { line-height: 1.65; margin-bottom: 1rem; color: #33434d; }
+.guide-list { margin: 0 0 1.25rem 0; padding-left: 1.2rem; }
+.guide-list li { line-height: 1.6; margin-bottom: 0.55rem; color: #33434d; }
+.guide-table-wrap { overflow-x: auto; margin: 0.5rem 0 0.75rem; }
+.guide-table { width: 100%; border-collapse: collapse; font-size: 0.98rem; }
+.guide-table th, .guide-table td { text-align: left; padding: 0.8rem 1rem; border-bottom: 1px solid var(--border); }
+.guide-table thead th { background: var(--gray-light); font-weight: 800; }
+.guide-note { font-size: 0.88rem; color: var(--gray); font-style: italic; }
+.guide-cta { background: var(--teal-light); border: 1px solid var(--teal); border-radius: var(--radius); padding: 1.75rem 1.5rem; text-align: center; margin: 2.5rem 0 1.5rem; }
+.guide-cta h3 { color: var(--teal-dark); }
+.guide-cta-btn, .guide-cta-btn2 { display: inline-block; margin: 0.4rem 0.3rem 0; }
+.guide-back { margin-top: 1.5rem; }
+.guide-back a { color: var(--teal); font-weight: 700; text-decoration: none; }
+.guide-foot { background: var(--charcoal); color: #cfe0e6; text-align: center; padding: 1.5rem 1.25rem; font-size: 0.85rem; }
+.guide-foot a { color: var(--amber); font-weight: 700; text-decoration: none; }
