@@ -264,8 +264,8 @@ ul { list-style: none; }
 }
 
 .hero-logo {
-  width: min(280px, 55vw);
-  margin: 0 auto 0.6rem;
+  width: min(470px, 56vw);
+  margin: 0 auto 0.5rem;
   filter: drop-shadow(0 2px 24px rgba(0,0,0,0.7));
 }
 
