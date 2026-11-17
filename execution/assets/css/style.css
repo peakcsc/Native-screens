@@ -1862,3 +1862,33 @@ ul { list-style: none; }
   .estimate-grid{ grid-template-columns:1fr; gap:2rem; }
   .estimate-photo{ max-width:420px; }
 }
+
+/* ===== Bigger, fuller Our Services section ===== */
+.section.services{ background:var(--bg,#f6f8f8); }
+@media (min-width:861px){
+  .section.services{
+    min-height:92vh;
+    display:flex;
+    align-items:center;
+  }
+  .section.services > .container{
+    width:100%;
+    max-width:1360px;
+  }
+}
+.services .services-compact{ gap:1.5rem; margin-top:2.25rem; }
+.services .svc-card-media{ aspect-ratio:3 / 4; }
+.services .svc-card-media img{ transition:transform .45s ease; }
+.services .svc-card-body{ padding:1.1rem 1rem 1.35rem; }
+.services .svc-card-body strong{ font-size:1.2rem; }
+.services .svc-card-body span{ font-size:.95rem; }
+.services .section-title{ font-size:clamp(2rem, 4vw, 3rem); }
+@media (hover:hover){
+  .services .svc-card:hover .svc-card-media img{ transform:scale(1.07); }
+}
+@media (prefers-reduced-motion:reduce){
+  .services .svc-card-media img{ transition:none; }
+}
+@media (max-width:860px){
+  .services .svc-card-media{ aspect-ratio:4 / 3; }
+}
