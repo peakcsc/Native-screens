@@ -1481,7 +1481,7 @@ ul { list-style: none; }
 .form-success a { color: var(--teal); font-weight: 700; }
 
 /* ═══ Hero quote redesign ═══ */
-.hero { max-height: none; }
+.hero { max-height: 100svh; }
 .hero-grid {
   display: grid;
   grid-template-columns: 1fr 390px;
