@@ -1892,3 +1892,23 @@ ul { list-style: none; }
 @media (max-width:860px){
   .services .svc-card-media{ aspect-ratio:4 / 3; }
 }
+
+/* ===== Trim Our Services height (less scrolling) ===== */
+@media (min-width:861px){
+  .section.services{ min-height:0; display:block; }
+}
+.services .services-compact{ margin-top:1.75rem; }
+/* Phone: 2 cards per row instead of 1 to roughly halve the scroll */
+@media (max-width:560px){
+  .services .services-compact{ grid-template-columns:1fr 1fr; gap:.8rem; }
+  .services .svc-card:last-child{
+    grid-column:1 / -1;
+    max-width:calc(50% - .4rem);
+    margin-left:auto;
+    margin-right:auto;
+  }
+  .services .svc-card-media{ aspect-ratio:1 / 1; }
+  .services .svc-card-body{ padding:.7rem .55rem .9rem; }
+  .services .svc-card-body strong{ font-size:.92rem; line-height:1.2; }
+  .services .svc-card-body span{ font-size:.76rem; }
+}
