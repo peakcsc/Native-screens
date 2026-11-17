@@ -223,6 +223,9 @@ ul { list-style: none; }
   object-fit: cover;
   z-index: 0;
   pointer-events: none;
+  /* Zoom in slightly so the stock-video watermark in the top-right is cropped off-screen */
+  transform: scale(1.22);
+  transform-origin: center center;
 }
 
 .hero-overlay {
@@ -650,9 +653,32 @@ ul { list-style: none; }
 
 .area-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2.5rem 3rem;
+  grid-template-columns: auto auto auto;
+  justify-content: center;
+  gap: 2.5rem 4.5rem;
   align-items: start;
+  text-align: left;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+/* Center the Service Area heading/intro so it isn't left-heavy with empty space */
+.service-area .section-eyebrow,
+.service-area .section-title,
+.service-area .section-sub {
+  text-align: center;
+}
+.service-area .section-sub { margin-left: auto; margin-right: auto; }
+/* Long Broward list flows into two sub-columns so column heights balance */
+@media (min-width: 901px) {
+  .area-grid > .area-column:first-child ul {
+    display: block;
+    columns: 2;
+    column-gap: 2.75rem;
+  }
+  .area-grid > .area-column:first-child li {
+    margin-bottom: 0.35rem;
+    break-inside: avoid;
+  }
 }
 
 .area-column h3 {
