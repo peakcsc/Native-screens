@@ -1651,3 +1651,83 @@ ul { list-style: none; }
 .guide-back a { color: var(--teal); font-weight: 700; text-decoration: none; }
 .guide-foot { background: var(--charcoal); color: #cfe0e6; text-align: center; padding: 1.5rem 1.25rem; font-size: 0.85rem; }
 .guide-foot a { color: var(--amber); font-weight: 700; text-decoration: none; }
+
+/* ===== Services photo cards (Our Services) ===== */
+.services-compact{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:1.1rem;
+  margin-top:1.5rem;
+  align-items:stretch;
+}
+.svc-card{
+  display:flex;
+  flex-direction:column;
+  background:#fff;
+  border:1px solid rgba(0,0,0,.08);
+  border-radius:14px;
+  overflow:hidden;
+  text-decoration:none;
+  color:inherit;
+  box-shadow:0 2px 6px rgba(0,0,0,.05);
+  transition:transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.svc-card-media{
+  display:block;
+  aspect-ratio:4 / 3;
+  overflow:hidden;
+  background:#eef1f1;
+}
+.svc-card-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+.svc-card-body{
+  display:flex;
+  flex-direction:column;
+  gap:.2rem;
+  padding:.85rem 1rem 1.05rem;
+  text-align:center;
+}
+.svc-card-body strong{
+  font-size:1.02rem;
+  font-weight:700;
+  line-height:1.25;
+}
+.svc-card-body span{
+  font-size:.85rem;
+  color:var(--gray,#6b7280);
+  line-height:1.3;
+}
+@media (hover:hover){
+  .svc-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 10px 24px rgba(0,0,0,.12);
+    border-color:rgba(0,0,0,.14);
+  }
+}
+.svc-card:focus-visible{
+  outline:3px solid var(--teal,#0f766e);
+  outline-offset:2px;
+}
+@media (prefers-reduced-motion:reduce){
+  .svc-card{transition:none;}
+  .svc-card:hover{transform:none;}
+}
+/* Tablet: 2 per row, center the orphaned 5th card at the same width */
+@media (max-width:1000px){
+  .services-compact{grid-template-columns:repeat(2,1fr);}
+  .svc-card:last-child{
+    grid-column:1 / -1;
+    max-width:calc(50% - 0.55rem);
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+/* Phone: one full-width card per row */
+@media (max-width:560px){
+  .services-compact{grid-template-columns:1fr;gap:1rem;}
+  .svc-card:last-child{max-width:none;}
+}
