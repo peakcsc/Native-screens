@@ -1989,3 +1989,16 @@ ul { list-style: none; }
   padding-bottom:1px;
 }
 .footer-bbb:hover{ opacity:1; }
+
+/* ===== Our Services photo background ===== */
+.section.services{
+  background-color:#0c181e;
+  background-image:
+    linear-gradient(rgba(10,22,28,.62), rgba(10,22,28,.70)),
+    url("../images/services-bg.webp");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+.services .section-eyebrow{ color:#fff; opacity:.9; }
+.services .section-title{ color:#fff; }
