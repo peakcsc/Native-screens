@@ -2002,3 +2002,12 @@ ul { list-style: none; }
 }
 .services .section-eyebrow{ color:#fff; opacity:.9; }
 .services .section-title{ color:#fff; }
+
+/* ===== Smaller video, placed under the gallery photos ===== */
+.video-embed-sm{
+  max-width:620px;
+  margin:1.75rem auto 0.5rem;
+}
+@media (max-width:600px){
+  .video-embed-sm{ max-width:100%; margin-top:1.25rem; }
+}
