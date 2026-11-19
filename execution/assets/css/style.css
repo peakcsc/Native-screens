@@ -1975,3 +1975,17 @@ ul { list-style: none; }
 @media (max-width:600px){
   .video-embed{ border-radius:10px; margin-bottom:1.5rem; }
 }
+
+/* ===== Footer BBB trust link ===== */
+.footer-bbb{
+  display:inline-block;
+  margin-top:.75rem;
+  font-size:.85rem;
+  font-weight:600;
+  color:#fff;
+  opacity:.85;
+  text-decoration:none;
+  border-bottom:1px solid rgba(255,255,255,.35);
+  padding-bottom:1px;
+}
+.footer-bbb:hover{ opacity:1; }
