@@ -2011,3 +2011,14 @@ ul { list-style: none; }
 @media (max-width:600px){
   .video-embed-sm{ max-width:100%; margin-top:1.25rem; }
 }
+
+/* ===== Project Gallery photo background ===== */
+.gallery-section{
+  background-color:#000;
+  background-image:
+    linear-gradient(rgba(6,14,18,.66), rgba(6,14,18,.74)),
+    url("../images/gallery-bg.webp");
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
