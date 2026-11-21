@@ -230,3 +230,20 @@ const HERO_REVIEWS = [
     }, 400);
   }, 4500);
 })();
+
+/* ===== Load hero video only on desktop (keeps mobile fast) ===== */
+(function () {
+  var v = document.getElementById('heroVideo');
+  if (!v) return;
+  var wide = window.matchMedia('(min-width: 768px)');
+  var slow = navigator.connection && (navigator.connection.saveData ||
+             /2g|slow-2g|3g/.test(navigator.connection.effectiveType || ''));
+  if (wide.matches && !slow) {
+    var s = document.createElement('source');
+    s.src = 'assets/images/hero-video.mp4';
+    s.type = 'video/mp4';
+    v.appendChild(s);
+    v.setAttribute('autoplay', '');
+    try { v.load(); var p = v.play(); if (p && p.catch) p.catch(function(){}); } catch (e) {}
+  }
+})();

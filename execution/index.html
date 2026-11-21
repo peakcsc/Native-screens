@@ -82,6 +82,7 @@
 
   <!-- Preload critical assets -->
   <link rel="preload" href="assets/images/logo-final.png" as="image" />
+  <link rel="preload" href="assets/images/hero-bg.webp" as="image" fetchpriority="high" />
 
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -122,9 +123,7 @@
 
   <!-- ═══ HERO ═══ -->
   <section class="hero" id="hero">
-    <video class="hero-video" id="heroVideo" autoplay muted loop playsinline preload="auto" poster="assets/images/hero-bg.jpg">
-      <source src="assets/images/hero-video.mp4" type="video/mp4" />
-    </video>
+    <video class="hero-video" id="heroVideo" muted loop playsinline preload="none" poster="assets/images/hero-bg.webp"></video>
     <div class="hero-overlay"></div>
     <div class="hero-content hero-grid">
       <div class="hero-left">
