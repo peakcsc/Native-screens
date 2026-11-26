@@ -1745,7 +1745,7 @@ ul { list-style: none; }
 /* Tablet: 2 per row, center the orphaned 5th card at the same width */
 @media (max-width:1000px){
   .services-compact{grid-template-columns:repeat(2,1fr);}
-  .svc-card:last-child{
+  .svc-card:last-child:nth-child(odd){
     grid-column:1 / -1;
     max-width:calc(50% - 0.55rem);
     margin-left:auto;
@@ -1927,7 +1927,7 @@ ul { list-style: none; }
 /* Phone: 2 cards per row instead of 1 to roughly halve the scroll */
 @media (max-width:560px){
   .services .services-compact{ grid-template-columns:1fr 1fr; gap:.8rem; }
-  .services .svc-card:last-child{
+  .services .svc-card:last-child:nth-child(odd){
     grid-column:1 / -1;
     max-width:calc(50% - .4rem);
     margin-left:auto;
