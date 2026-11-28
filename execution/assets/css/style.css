@@ -2152,3 +2152,17 @@ ul { list-style: none; }
   .hero-stage .hero-logo-big{ z-index:2; }
   .hero-centered-content, .hero-corner, .hero-reviews-widget, .hero-headline-stage{ z-index:3; }
 }
+
+/* ===== Interactive quote form service chips ===== */
+.quote-chip-label{ font-size:.85rem; font-weight:600; color:#33474f; margin:.1rem 0 .55rem; }
+.quote-chips{ display:flex; flex-wrap:wrap; gap:.45rem; margin:0 0 .95rem; }
+.quote-chip{
+  -webkit-appearance:none; appearance:none; font-family:inherit;
+  border:1.5px solid #d4dde0; background:#fff; color:#2a3b42;
+  font-weight:600; font-size:.82rem; line-height:1; padding:.55rem .8rem;
+  border-radius:50px; cursor:pointer;
+  transition:background .15s ease, border-color .15s ease, color .15s ease;
+}
+.quote-chip:hover{ border-color:#f5a623; }
+.quote-chip.is-selected{ background:#0c1f28; border-color:#0c1f28; color:#fff; }
+.quote-chip:focus-visible{ outline:2px solid #f5a623; outline-offset:2px; }

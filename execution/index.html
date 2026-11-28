@@ -128,13 +128,18 @@
     <div class="hero-corner hero-corner-right">
       <form class="quote-card quote-card-mini" id="quoteForm" onsubmit="handleQuote(event)">
         <h2 class="quote-title">Get a Fast Quote</h2>
+        <p class="quote-chip-label">What can we help with?</p>
+        <div class="quote-chips" id="quoteChips">
+          <button type="button" class="quote-chip" data-service="Rescreen / repair">Rescreen / Repair</button>
+          <button type="button" class="quote-chip" data-service="New screen enclosure">New Enclosure</button>
+          <button type="button" class="quote-chip" data-service="Pool cage">Pool Cage</button>
+          <button type="button" class="quote-chip" data-service="Screen door">Screen Door</button>
+          <button type="button" class="quote-chip" data-service="Window screens">Window Screens</button>
+          <button type="button" class="quote-chip" data-service="Something else">Something Else</button>
+        </div>
+        <input type="hidden" id="q-service" name="service" value="" />
         <input type="text" id="q-name" name="name" required placeholder="Your name" autocomplete="name" />
         <input type="tel" id="q-phone" name="phone" required placeholder="Phone number" autocomplete="tel" inputmode="tel" />
-        <label class="quote-photo" for="q-photo">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
-          <span id="q-photo-label">Add a photo of your screen</span>
-        </label>
-        <input type="file" id="q-photo" name="photo" accept="image/*" capture="environment" hidden />
         <button type="submit" class="btn btn-quote" id="q-submit">Get My Quote</button>
       </form>
       <div class="quote-success" id="quoteSuccess" hidden>
