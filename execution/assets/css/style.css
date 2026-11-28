@@ -2133,6 +2133,22 @@ ul { list-style: none; }
 
 /* Mobile: let the stage hero grow so stacked form/video/reviews are reachable */
 @media (max-width:860px){
-  .hero.hero-stage{ max-height:none; height:auto; overflow-x:clip; overflow-y:visible; }
+  .hero.hero-stage{ max-height:none; height:auto; overflow:clip; }
   .hero-stage .hero-logo-big{ width:min(360px,64vw); }
+}
+
+/* Mobile-only hero background image: show the photo across the first screen,
+   dark below, so the tall stacked content doesn't squash it into a thin strip */
+@media (max-width:860px){
+  #heroVideo{ display:none; }
+  .hero.hero-stage{ background-color:#0c1f28; }
+  .hero.hero-stage::before{
+    content:""; position:absolute; top:0; left:0; right:0; height:100svh;
+    background-image:url("../images/hero-mobile.webp");
+    background-size:cover; background-position:34% center; background-repeat:no-repeat;
+    z-index:0; pointer-events:none;
+  }
+  .hero-stage .hero-overlay{ z-index:1; }
+  .hero-stage .hero-logo-big{ z-index:2; }
+  .hero-centered-content, .hero-corner, .hero-reviews-widget, .hero-headline-stage{ z-index:3; }
 }
