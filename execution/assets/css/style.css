@@ -2047,7 +2047,7 @@ ul { list-style: none; }
 .hero-stage{ position:relative; overflow:hidden; }
 .hero-logo-big{
   position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-  width:min(600px,50vw); max-height:48%; object-fit:contain;
+  width:min(900px,74vw); max-height:72%; object-fit:contain;
   z-index:1; opacity:.97; pointer-events:none;
   filter:drop-shadow(0 6px 46px rgba(0,0,0,.7));
 }
