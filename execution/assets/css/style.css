@@ -2133,7 +2133,7 @@ ul { list-style: none; }
 
 /* Mobile: let the stage hero grow so stacked form/video/reviews are reachable */
 @media (max-width:860px){
-  .hero.hero-stage{ max-height:none; height:auto; overflow:clip; padding-bottom:4.5rem; }
+  .hero.hero-stage{ max-height:none; height:auto; overflow:clip; }
   .hero-stage .hero-logo-big{ width:min(360px,64vw); }
 }
 
