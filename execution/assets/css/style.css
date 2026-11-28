@@ -1681,7 +1681,7 @@ ul { list-style: none; }
 /* ===== Services photo cards (Our Services) ===== */
 .services-compact{
   display:grid;
-  grid-template-columns:repeat(5,1fr);
+  grid-template-columns:repeat(3,1fr);
   gap:1.1rem;
   margin-top:1.5rem;
   align-items:stretch;
