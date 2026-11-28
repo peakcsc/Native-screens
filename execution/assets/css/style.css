@@ -2046,8 +2046,8 @@ ul { list-style: none; }
 /* ===== Hero "stage": giant logo, form bottom-left, video bottom-right ===== */
 .hero-stage{ position:relative; overflow:hidden; }
 .hero-logo-big{
-  position:absolute; top:46%; left:50%; transform:translate(-50%,-50%);
-  width:min(470px,40vw); max-height:36%; object-fit:contain;
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+  width:min(600px,50vw); max-height:48%; object-fit:contain;
   z-index:1; opacity:.97; pointer-events:none;
   filter:drop-shadow(0 6px 46px rgba(0,0,0,.7));
 }
@@ -2133,7 +2133,7 @@ ul { list-style: none; }
 
 /* Mobile: let the stage hero grow so stacked form/video/reviews are reachable */
 @media (max-width:860px){
-  .hero.hero-stage{ max-height:none; height:auto; overflow:clip; }
+  .hero.hero-stage{ max-height:none; height:auto; overflow:clip; padding-bottom:4.5rem; }
   .hero-stage .hero-logo-big{ width:min(360px,64vw); }
 }
 
