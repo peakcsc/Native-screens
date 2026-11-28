@@ -2022,3 +2022,23 @@ ul { list-style: none; }
   background-position:center;
   background-repeat:no-repeat;
 }
+
+/* ===== Hero inline video widget ===== */
+.hero-video-inline{
+  width:100%; max-width:330px; aspect-ratio:16/9;
+  border-radius:12px; overflow:hidden; margin:0 0 1.2rem;
+  box-shadow:0 10px 30px rgba(0,0,0,.4); border:1px solid rgba(255,255,255,.22);
+  background:#000;
+}
+.hero-video-inline iframe{ width:100%; height:100%; border:0; display:block; }
+@media (max-width:860px){
+  .hero-video-inline{ max-width:420px; margin-left:auto; margin-right:auto; }
+}
+
+/* ===== Tighten hero-left on desktop so the video widget + call button fit ===== */
+@media (min-width:861px){
+  .hero-left .hero-logo{ width:min(320px,30vw); margin:0 0 .6rem; }
+  .hero-left .hero-headline{ font-size:clamp(1.45rem,2.4vw,2rem); line-height:1.12; margin:0 0 .75rem; }
+  .hero-left .hero-eyebrow{ margin-bottom:.5rem; }
+  .hero-video-inline{ max-width:300px; margin-bottom:.85rem; }
+}
