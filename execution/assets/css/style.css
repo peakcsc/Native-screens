@@ -2166,3 +2166,7 @@ ul { list-style: none; }
 .quote-chip:hover{ border-color:#f5a623; }
 .quote-chip.is-selected{ background:#0c1f28; border-color:#0c1f28; color:#fff; }
 .quote-chip:focus-visible{ outline:2px solid #f5a623; outline-offset:2px; }
+
+/* Quote form inside the Request an Estimate section */
+.estimate-form{ max-width:430px; margin:0 auto 1.25rem; text-align:left; }
+.estimate-content .quote-success{ max-width:430px; margin:0 auto 1.25rem; }

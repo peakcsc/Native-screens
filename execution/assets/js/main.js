@@ -164,40 +164,44 @@ updateHeader();
 const CLOUDINARY_CLOUD = 'cew3ro6s';
 const CLOUDINARY_PRESET = 'native_screens_quotes';
 
-// Tap-to-select service chips (multi-select) -> hidden "service" field
-(function () {
-  const chips = document.querySelectorAll('#quoteChips .quote-chip');
-  const field = document.getElementById('q-service');
-  if (!chips.length || !field) return;
+// Tap-to-select service chips (multi-select) -> each form's hidden "service" field
+document.querySelectorAll('.quote-chips').forEach((group) => {
+  const form = group.closest('form');
+  const field = form && form.querySelector('input[name="service"]');
+  const chips = group.querySelectorAll('.quote-chip');
   chips.forEach((chip) => {
     chip.addEventListener('click', () => {
       chip.classList.toggle('is-selected');
       chip.setAttribute('aria-pressed', chip.classList.contains('is-selected') ? 'true' : 'false');
-      const picked = [...chips].filter((c) => c.classList.contains('is-selected')).map((c) => c.dataset.service);
-      field.value = picked.join(', ');
+      if (field) {
+        field.value = [...chips].filter((c) => c.classList.contains('is-selected'))
+          .map((c) => c.dataset.service).join(', ');
+      }
     });
   });
-})();
+});
 
+// Works for every quote form on the page (hero + estimate section)
 function handleQuote(e) {
   e.preventDefault();
-  const btn = document.getElementById('q-submit');
+  const form = e.target;
+  const val = (sel) => { const el = form.querySelector(sel); return el && el.value ? el.value.trim() : ''; };
+  const btn = form.querySelector('button[type="submit"]');
   if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
 
   // Send the lead to GoHighLevel (sendBeacon avoids CORS)
   try {
     const fd = new FormData();
-    fd.append('name',    document.getElementById('q-name').value.trim());
-    fd.append('phone',   document.getElementById('q-phone').value.trim());
-    fd.append('service', (document.getElementById('q-service') || {}).value || '');
-    fd.append('source',  'nativescreens.com — hero quote');
+    fd.append('name',    val('input[name="name"]'));
+    fd.append('phone',   val('input[name="phone"]'));
+    fd.append('service', val('input[name="service"]'));
+    fd.append('source',  form.id === 'quoteForm2' ? 'nativescreens.com — estimate section' : 'nativescreens.com — hero quote');
     navigator.sendBeacon(WEBHOOK_URL, fd);
   } catch (_) {}
 
-  // Show success
-  const form = document.getElementById('quoteForm');
-  const success = document.getElementById('quoteSuccess');
-  if (form && success) { form.hidden = true; success.hidden = false; }
+  // Show this form's success panel
+  const success = form.parentElement.querySelector('.quote-success');
+  if (success) { form.hidden = true; success.hidden = false; }
 }
 
 // ═══ Hero rotating Google reviews ═══

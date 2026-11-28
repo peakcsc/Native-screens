@@ -260,9 +260,6 @@
     <div class="scroll-container">
       <div class="infinite-scroll" id="sliderTrack"></div>
     </div>
-    <div class="video-embed video-embed-sm">
-      <iframe src="https://www.youtube-nocookie.com/embed/rWP1cXRNpxc" title="Native Screens — screen enclosure and pool cage work in South Florida" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </div>
     <div class="gallery-footer">
       <p class="gallery-note">See more on <a href="https://www.facebook.com/nativescreens" target="_blank" rel="noopener">Facebook</a> and <a href="https://www.instagram.com/nativescreens" target="_blank" rel="noopener">Instagram</a></p>
     </div>
@@ -505,7 +502,31 @@
       <div class="estimate-content">
       <p class="section-eyebrow">No Pressure. No Obligation.</p>
       <h2 class="section-title">Request an Estimate</h2>
-      <p class="section-sub" style="margin-left:auto;margin-right:auto;">Call us today and we'll come out, take a look, and give you an honest quote.</p>
+      <p class="section-sub" style="margin-left:auto;margin-right:auto;">Tell us what you need and we'll come out, take a look, and give you an honest quote.</p>
+
+      <form class="quote-card quote-card-mini estimate-form" id="quoteForm2" onsubmit="handleQuote(event)">
+        <p class="quote-chip-label">What can we help with?</p>
+        <div class="quote-chips">
+          <button type="button" class="quote-chip" data-service="Rescreen / repair">Rescreen / Repair</button>
+          <button type="button" class="quote-chip" data-service="New screen enclosure">New Enclosure</button>
+          <button type="button" class="quote-chip" data-service="Pool cage">Pool Cage</button>
+          <button type="button" class="quote-chip" data-service="Screen door">Screen Door</button>
+          <button type="button" class="quote-chip" data-service="Window screens">Window Screens</button>
+          <button type="button" class="quote-chip" data-service="Something else">Something Else</button>
+        </div>
+        <input type="hidden" name="service" value="" />
+        <input type="text" id="q-name-2" name="name" required placeholder="Your name" autocomplete="name" />
+        <input type="tel" id="q-phone-2" name="phone" required placeholder="Phone number" autocomplete="tel" inputmode="tel" />
+        <button type="submit" class="btn btn-quote" id="q-submit-2">Get My Quote</button>
+      </form>
+      <div class="quote-success" id="quoteSuccess2" hidden>
+        <div class="qs-check" aria-hidden="true">
+          <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+        </div>
+        <h3>Thanks — got it!</h3>
+        <p>We'll reach out shortly to set up your estimate. Need us now? <a href="tel:+19549660163">(954) 966-0163</a></p>
+      </div>
+
       <p class="assess-prefer">Prefer to talk now?</p>
       <a href="tel:+19549660163" class="big-phone">(954) 966-0163</a>
       <p style="color:var(--gray);margin-bottom:2rem;">Call or text — a real person answers.</p>
